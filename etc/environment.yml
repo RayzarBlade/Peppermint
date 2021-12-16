@@ -1,0 +1,12 @@
+#######################################
+# MySQL settings
+# -> if you change these settings
+#    you have to remove the database:
+#         docker-compose rm mysql
+#    because it's stored database in
+#    volume and provisioning is only
+#    done once.
+MYSQL_ROOT_PASSWORD=dev
+MYSQL_USER=dev
+MYSQL_PASSWORD=dev
+MYSQL_DATABASE=dev
