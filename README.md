@@ -1,4 +1,4 @@
-<p align="center"><a href="https://github.com/RayzarBlade/Pepermint" target="_blank"><img src="https://github.com/RayzarBlade/Peppermint/blob/media/Peppermint%20Logo.png" width="400"></a></p>
+<p align="center"><a href="https://github.com/RayzarBlade/Peppermint" target="_blank"><img src="https://github.com/RayzarBlade/Peppermint/blob/media/Peppermint%20Logo.png" width="400"></a></p>
 
 ## About Pepermint
 
