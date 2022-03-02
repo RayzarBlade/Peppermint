@@ -1,4 +1,4 @@
-FROM ubuntu:21.04
+FROM ubuntu:21.10
 
 # Copy ssh key
 COPY etc/ssh /opt/docker/etc/ssh
@@ -29,19 +29,20 @@ RUN add-apt-repository ppa:ondrej/php
 RUN add-apt-repository ppa:ondrej/apache2
 RUN apt-get update
 RUN apt-get upgrade -y
-RUN apt-get install -y php8.0-common php8.0-cli -y
-RUN apt-get install -y php8.0-bz2
-RUN apt-get install -y php8.0-curl
-RUN apt-get install -y php8.0-intl
-RUN apt-get install -y php8.0-mysql
-RUN apt-get install -y php8.0-readline
-RUN apt-get install -y php8.0-xml
-RUN apt-get install -y php8.0-bcmath
-RUN apt-get install -y php8.0-mbstring
-RUN apt-get install -y php8.0-xdebug
-RUN apt-get install -y php8.0-gd
-RUN apt-get install -y php8.0-zip
-RUN apt-get install -y libapache2-mod-php8.0
+RUN apt-get install -y php8.1
+RUN apt-get install -y php8.1-common php8.1-cli -y
+RUN apt-get install -y php8.1-bz2
+RUN apt-get install -y php8.1-curl
+RUN apt-get install -y php8.1-intl
+RUN apt-get install -y php8.1-mysql
+RUN apt-get install -y php8.1-readline
+RUN apt-get install -y php8.1-xml
+RUN apt-get install -y php8.1-bcmath
+RUN apt-get install -y php8.1-mbstring
+RUN apt-get install -y php8.1-xdebug
+RUN apt-get install -y php8.1-gd
+RUN apt-get install -y php8.1-zip
+RUN apt-get install -y libapache2-mod-php8.1
 RUN apt-get install -y nodejs
 RUN apt-get install -y npm
 RUN apt-get install -y composer
