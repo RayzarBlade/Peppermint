@@ -52,5 +52,5 @@ RUN apt-get clean
 EXPOSE 80
 
 # Define default command
-ENTRYPOINT [ "/entrypoint.sh" ]
-CMD [ "apache2ctl", "-D", "FOREGROUND" ]
+ENTRYPOINT [ "/usr/sbin/apache2ctl" ]
+CMD ["-D", "FOREGROUND" ]
