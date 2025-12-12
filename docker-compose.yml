@@ -10,7 +10,7 @@ services:
         environment:
             - VIRTUAL_PORT=80
 
-    app2:
+    second-app:
         build:
             context: './docker-app/php-8.1'
             dockerfile: Dockerfile
