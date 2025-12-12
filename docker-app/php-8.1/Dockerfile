@@ -3,13 +3,15 @@ FROM ubuntu:24.04
 # Define working directory
 WORKDIR /var/www/html
 
+ENV DEBIAN_FRONTEND=noninteractive
+
 # Install apache2
-RUN apt-get update
+RUN apt-get update && apt-get upgrade -y
 RUN apt-get install -y apt-utils
 RUN apt-get install -y apache2
 RUN apt-get install -y apache2-utils
 RUN apt-get install -y git
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y tzdata
+RUN apt-get install -y tzdata
 RUN apt-get install -y software-properties-common
 RUN add-apt-repository ppa:ondrej/php
 RUN add-apt-repository ppa:ondrej/apache2
