@@ -1,4 +1,4 @@
-FROM ubuntu:21.10
+FROM ubuntu:24.04
 
 # Define working directory
 WORKDIR /var/www/html
