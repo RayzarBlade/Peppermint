@@ -1,8 +1,8 @@
 services:
-    app:
+    first-app:
         build:
-            context: .
-            dockerfile: dockerfile
+            context: './docker-app/php-8.1'
+            dockerfile: Dockerfile
         links:
           - mysql
         ports:
@@ -13,8 +13,8 @@ services:
 
     app2:
         build:
-            context: .
-            dockerfile: dockerfile
+            context: './docker-app/php-8.1'
+            dockerfile: Dockerfile
         links:
           - mysql
         ports:
