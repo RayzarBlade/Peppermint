@@ -7,7 +7,6 @@ services:
           - mysql
         ports:
             - "80:80"
-            - "10022:22"
         environment:
             - VIRTUAL_PORT=80
 
@@ -29,7 +28,7 @@ services:
         ports:
             - "14306:3306"
         env_file:
-            - etc/environment.yml
+            - docker-app/etc/environment.yml
 
     phpmyadmin:
         image: phpmyadmin/phpmyadmin

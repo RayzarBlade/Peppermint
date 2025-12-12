@@ -1,21 +1,7 @@
 FROM ubuntu:21.10
 
-# Copy ssh key
-COPY etc/ssh /opt/docker/etc/ssh
-COPY etc/entrypoint.sh entrypoint.sh
-
-
 # Define working directory
-WORKDIR /root
-
-# Create Entry point
-COPY etc/entrypoint.sh entrypoint.sh
-RUN chmod +x /entrypoint.sh
-
-
-# Create ssh key in file structure
-RUN mkdir ~/.ssh
-RUN cp /opt/docker/etc/ssh/authorized_keys ~/.ssh/
+WORKDIR /var/www/html
 
 # Install apache2
 RUN apt-get update
