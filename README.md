@@ -6,4 +6,4 @@
 * Peppermint is configured to allow dual App servers for API and Service Development.
 * The Peppermint files can be easily configured to customize your specific development needs.  (*simply comment out what you do not need.*)
 * Peppermint contains yml instructions to build two Appache/Ubuntu-24.04/PHP 8.1 app servers.  NodeJS, Composer, Python, and git are all installed on the server.
-* Included with the instructions are request to build a MySQL, PHPmyAdmin, and a mailpit server.
+* Included with the instructions are request to build a MySQL (8.0, 5.7), PHPmyAdmin, and a mailpit server.

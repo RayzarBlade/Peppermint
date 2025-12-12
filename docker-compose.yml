@@ -22,7 +22,7 @@ services:
             - VIRTUAL_PORT=80
     mysql:
         build:
-            context: './docker-app/mysql-5.7'
+            context: './docker-app/mysql-8.0'
             dockerfile: Dockerfile
         ports:
             - "14306:3306"
