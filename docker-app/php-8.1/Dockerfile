@@ -1,5 +1,7 @@
 FROM ubuntu:24.04
 
+ARG NODE_VERSION
+
 # Define working directory
 WORKDIR /var/www/html
 
@@ -7,7 +9,8 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 # Install apache2
 RUN apt-get update && apt-get upgrade -y
-RUN apt-get install -y apt-utils curl zip unzip git apache2 apache2-utils tzdata
+RUN mkdir -p /etc/apt/keyrings
+RUN apt-get install -y apt-utils curl ca-certificates zip unzip git apache2 apache2-utils tzdata
 RUN apt-get install -y software-properties-common
 RUN add-apt-repository ppa:ondrej/php
 RUN add-apt-repository ppa:ondrej/apache2
@@ -26,6 +29,9 @@ RUN apt-get install -y php8.1-xdebug
 RUN apt-get install -y php8.1-gd
 RUN apt-get install -y php8.1-zip
 RUN apt-get install -y libapache2-mod-php8.1
+RUN curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
+RUN echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_VERSION.x nodistro main" > /etc/apt/sources.list.d/nodesource.list
+RUN apt-get update
 RUN apt-get install -y nodejs
 RUN apt-get install -y npm
 RUN apt-get install -y composer
