@@ -5,6 +5,8 @@ services:
             dockerfile: Dockerfile
         links:
           - mysql
+        volumes:
+            - ./first-app:/var/www/html
         ports:
             - "80:80"
         environment:
@@ -15,6 +17,8 @@ services:
             dockerfile: Dockerfile
         links:
           - mysql
+        volumes:
+            - ./second-app:/var/www/html
         ports:
             - "85:80"
             - "20022:2022"
